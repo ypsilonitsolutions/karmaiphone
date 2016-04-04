@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationVC">
+            <connections>
+                <outlet property="btn_clear" destination="MiC-hc-du1" id="ftF-BD-cw9"/>
+                <outlet property="table_noti" destination="VJC-o7-ODo" id="fTq-X8-Ub0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1S-Sx-fjw">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VaN-jM-wiz" userLabel="HeaderView">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9m5-Lr-3Bf" userLabel="Search">
+                                    <rect key="frame" x="270" y="0.0" width="50" height="64"/>
+                                    <state key="normal" image="search_icon.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="action_Search:" destination="-1" eventType="touchUpInside" id="rUh-cb-lpX"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsg-fm-KRH" userLabel="Back">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="64"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="kw8-dx-ZF4"/>
+                                    </constraints>
+                                    <state key="normal" image="menu_icon.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="revealMenu:" destination="-1" eventType="touchUpInside" id="z5P-zV-Phg"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hE-yd-MC8" userLabel="PP">
+                                    <rect key="frame" x="87" y="0.0" width="147" height="64"/>
+                                    <state key="normal" image="karma_logo.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="action_ShowMyProfile:" destination="-1" eventType="touchUpInside" id="hi6-mT-Dym"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="9m5-Lr-3Bf" firstAttribute="leading" secondItem="7hE-yd-MC8" secondAttribute="trailing" constant="36" id="02Z-2s-fW5"/>
+                                <constraint firstItem="7hE-yd-MC8" firstAttribute="leading" secondItem="Hsg-fm-KRH" secondAttribute="trailing" constant="37" id="6oy-nG-bYc"/>
+                                <constraint firstItem="7hE-yd-MC8" firstAttribute="bottom" secondItem="Hsg-fm-KRH" secondAttribute="bottom" id="8eB-Ai-iuh"/>
+                                <constraint firstItem="7hE-yd-MC8" firstAttribute="bottom" secondItem="9m5-Lr-3Bf" secondAttribute="bottom" id="Gg3-P5-Bza"/>
+                                <constraint firstAttribute="bottom" secondItem="Hsg-fm-KRH" secondAttribute="bottom" id="Hti-Sq-6i7"/>
+                                <constraint firstAttribute="trailing" secondItem="9m5-Lr-3Bf" secondAttribute="trailing" id="MXv-ZX-mha"/>
+                                <constraint firstItem="Hsg-fm-KRH" firstAttribute="top" secondItem="7hE-yd-MC8" secondAttribute="top" id="T5K-NT-O0j"/>
+                                <constraint firstItem="9m5-Lr-3Bf" firstAttribute="top" secondItem="VaN-jM-wiz" secondAttribute="top" id="U7y-IK-6rm"/>
+                                <constraint firstItem="7hE-yd-MC8" firstAttribute="top" secondItem="9m5-Lr-3Bf" secondAttribute="top" id="ej3-kK-bIA"/>
+                                <constraint firstItem="7hE-yd-MC8" firstAttribute="centerX" secondItem="VaN-jM-wiz" secondAttribute="centerX" id="gWs-rE-xop"/>
+                                <constraint firstItem="Hsg-fm-KRH" firstAttribute="leading" secondItem="VaN-jM-wiz" secondAttribute="leading" id="xog-Jv-FkE"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiC-hc-du1">
+                            <rect key="frame" x="230" y="58" width="82" height="21"/>
+                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="295-xz-bND"/>
+                                <constraint firstAttribute="width" constant="82" id="3x5-6P-7sf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                            <state key="normal" title="Clear all">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="action_Clear:" destination="-1" eventType="touchUpInside" id="ioN-pX-8de"/>
+                            </connections>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VJC-o7-ODo">
+                            <rect key="frame" x="0.0" y="81" width="320" height="487"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="HNo-3n-d4z"/>
+                                <outlet property="delegate" destination="-1" id="IQp-4B-k3C"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="VaN-jM-wiz" firstAttribute="leading" secondItem="h1S-Sx-fjw" secondAttribute="leading" id="2f6-bM-q1C"/>
+                        <constraint firstAttribute="bottom" secondItem="VJC-o7-ODo" secondAttribute="bottom" id="4YS-nE-DW2"/>
+                        <constraint firstItem="VJC-o7-ODo" firstAttribute="top" secondItem="MiC-hc-du1" secondAttribute="bottom" constant="2" id="TGV-Hl-wXA"/>
+                        <constraint firstItem="MiC-hc-du1" firstAttribute="trailing" secondItem="h1S-Sx-fjw" secondAttribute="trailingMargin" id="U1T-zv-nEf"/>
+                        <constraint firstItem="VaN-jM-wiz" firstAttribute="trailing" secondItem="VJC-o7-ODo" secondAttribute="trailing" id="dkK-20-HqV"/>
+                        <constraint firstItem="MiC-hc-du1" firstAttribute="top" secondItem="h1S-Sx-fjw" secondAttribute="top" constant="58" id="ift-9F-zwY"/>
+                        <constraint firstAttribute="trailing" secondItem="VJC-o7-ODo" secondAttribute="trailing" id="j8n-tR-d9X"/>
+                        <constraint firstItem="VaN-jM-wiz" firstAttribute="top" secondItem="h1S-Sx-fjw" secondAttribute="top" id="jzG-rX-clu"/>
+                        <constraint firstItem="VJC-o7-ODo" firstAttribute="top" secondItem="VaN-jM-wiz" secondAttribute="bottom" constant="17" id="kD5-Wt-eiQ"/>
+                        <constraint firstItem="VJC-o7-ODo" firstAttribute="leading" secondItem="VaN-jM-wiz" secondAttribute="leading" id="ulZ-xK-BXG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="h1S-Sx-fjw" secondAttribute="trailing" id="M6S-H7-OFI"/>
+                <constraint firstItem="h1S-Sx-fjw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ocm-yQ-Tb8"/>
+                <constraint firstItem="h1S-Sx-fjw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dtP-cx-Y5F"/>
+                <constraint firstAttribute="bottom" secondItem="h1S-Sx-fjw" secondAttribute="bottom" id="egi-fv-nyV"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="289" y="286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="karma_logo.png" width="76" height="20"/>
+        <image name="menu_icon.png" width="38" height="38"/>
+        <image name="search_icon.png" width="32" height="32"/>
+    </resources>
+</document>
